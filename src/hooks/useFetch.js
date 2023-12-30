@@ -1,6 +1,7 @@
 import axios from 'axios';
 import  { useEffect } from 'react'
 import { NewsState } from '../context/NewsContext';
+const api = process.env.REACT_APP_NEWS_API;
 
 const useFetch = (url) => {
     const {articles,setArticles} = NewsState();
@@ -9,7 +10,9 @@ const useFetch = (url) => {
       const fetchNews = async () => {
         // Make an HTTP GET request to the specified URL
         axios
-          .get(url)
+          .get(url, {
+            headers: { Authorization: api },
+          })
           .then((response) => {
             // Update the articles state with the fetched data
             setArticles(response.data.articles);
