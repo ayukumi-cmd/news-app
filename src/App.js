@@ -7,7 +7,6 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import Routing from './Routing';
 import NewsContext from './context/NewsContext';
-import createUtilityClassName from 'react-bootstrap/esm/createUtilityClasses';
 function App() {
   return (
     <div>
