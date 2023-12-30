@@ -1,10 +1,10 @@
 import Items from "../components/Items";
 import '../assets/news.css';
 import useFetch from "../hooks/useFetch";
-
+const apiKey = process.env.REACT_APP_NEWS_API;
 const News = () => {
   // Used custom hook useFetch to fetch the data
-  const {articles} = useFetch(`/top-headlines?country=in&apiKey=70123fc1a2d542c8911f05f40a131526`);
+  const {articles} = useFetch(`/top-headlines?country=in&apiKey=${apiKey}`);
   
   return (
     <div className="container-fluid">
