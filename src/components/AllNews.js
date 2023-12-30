@@ -6,7 +6,7 @@ const apiKey = process.env.REACT_APP_NEWS_API;
 
 const AllNews = (props) => {
   // Used custom hook useFetch to fetch the data
-  const {articles} = useFetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`);
+  const {articles} = useFetch(`/top-headlines?country=in&apiKey=${apiKey}`);
     
   return (
       
