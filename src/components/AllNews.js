@@ -6,7 +6,7 @@ import useFetch from '../hooks/useFetch';
 
 const AllNews = (props) => {
   // Used custom hook useFetch to fetch the data
-  const {articles} = useFetch(`/v2/top-headlines?country=in&category=business`);
+  const {articles} = useFetch(`https://newsapi.org/v2/top-headlines?country=in&category=business`);
     
   return (
       
